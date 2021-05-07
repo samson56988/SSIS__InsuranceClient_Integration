@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "FinacialInformationSSIS", "FinacialInformationSSIS\FinacialInformationSSIS.dtproj", "{A68B3D49-5687-48E2-9D39-B1DE2D338D05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A68B3D49-5687-48E2-9D39-B1DE2D338D05}.Development|Default.ActiveCfg = Development
+		{A68B3D49-5687-48E2-9D39-B1DE2D338D05}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

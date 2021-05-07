@@ -1,0 +1,1313 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/27/2021 2:39:22 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="DESKTOP-J3DHBNP"
+  DTS:CreatorName="DESKTOP-J3DHBNP\Dante"
+  DTS:DTSID="{9DD5D677-8B1B-4EBF-8020-69837D3C947B}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.7001.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{1213085C-E50F-48CF-94C5-A87F30454718}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-J3DHBNP\SQLEXPRESS.FinacialInsurance]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{23B722BB-76D4-4560-BE10-2AAFB5831DB7}"
+      DTS:ObjectName="DESKTOP-J3DHBNP\SQLEXPRESS.FinacialInsurance">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-J3DHBNP\SQLEXPRESS;Initial Catalog=FinacialInsurance;Integrated Security=True;Application Name=SSIS-Package-{23B722BB-76D4-4560-BE10-2AAFB5831DB7}DESKTOP-J3DHBNP\SQLEXPRESS.FinacialInsurance;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SSIS Flat File Connection]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="SSIS Flat File Connection"
+      DTS:DTSID="{18594831-22DC-4915-A788-4C9DAD401C91}"
+      DTS:ObjectName="SSIS Flat File Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Dante\Downloads\FL_insurance_sample.csv\FL_insurance_sample.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="policyID"
+              DTS:DTSID="{B4D7160F-EC9B-4271-8407-D1D2021C56EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="statecode"
+              DTS:DTSID="{54EB4D66-D8C0-4F6B-BD19-4A19764B3F8F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county"
+              DTS:DTSID="{DCE2ADF9-8E7A-438D-B50D-5F684C0191E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="eq_site_limit"
+              DTS:DTSID="{2CF346B1-B199-4119-B00D-87963EFDA6C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hu_site_limit"
+              DTS:DTSID="{692C1F4C-A890-4F5C-ADEB-8AFC2E4BA9E2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fl_site_limit"
+              DTS:DTSID="{E9CB0AA6-F19E-4F7F-B6D2-AD34FB959D30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fr_site_limit"
+              DTS:DTSID="{AC770DCB-3260-44EA-B888-A028D6047D16}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tiv_2011"
+              DTS:DTSID="{0744EED1-CFAF-4FD3-8ED2-3BEC88C18561}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tiv_2012"
+              DTS:DTSID="{16872A44-2794-4AA0-92F0-A2E7E74C79F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="eq_site_deductible"
+              DTS:DTSID="{4FE8FB73-A60A-453A-9ABC-A2FD60973684}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hu_site_deductible"
+              DTS:DTSID="{2BEE7D7B-7FE0-47E5-8487-CFDC5D67C19B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fl_site_deductible"
+              DTS:DTSID="{6D77EBBF-CBD6-4ABA-B371-FD7A10E8A2E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fr_site_deductible"
+              DTS:DTSID="{AD21E171-6FBE-4F35-9AB3-F7B4E05E5599}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="point_latitude"
+              DTS:DTSID="{75E33E2A-8662-49AC-82E3-04D20180FF26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="point_longitude"
+              DTS:DTSID="{CF03640F-4DE9-404C-A37D-7B2BC41367D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="line"
+              DTS:DTSID="{E2CCBA33-F427-424A-896C-D7EF5BFB33DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="construction"
+              DTS:DTSID="{5E99B2AB-6D77-4869-9518-809217556175}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="point_granularity"
+              DTS:DTSID="{8FD7B1A9-B35C-4E3D-B642-6A556E764BDF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load CSV File"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2F94C3A8-D190-4800-BD5E-C255B1C6D55D}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load CSV File"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load CSV File\ADO NET Destination"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">"dbo"."Customers"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.ADONETDestination, Microsoft.SqlServer.ADONETDest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load CSV File\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-J3DHBNP\SQLEXPRESS.FinacialInsurance]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-J3DHBNP\SQLEXPRESS.FinacialInsurance]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[policyID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="policyID"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[PolicyID]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[policyID]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[statecode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="statecode"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[statecode]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[statecode]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[county]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="county"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[county]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[county]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[eq_site_limit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="eq_site_limit"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Eq_Site_Limit]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[eq_site_limit]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[hu_site_limit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="hu_site_limit"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[hu_site_limit]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[hu_site_limit]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[fl_site_limit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fl_site_limit"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[fl_site_limit]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[fl_site_limit]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[fr_site_limit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fr_site_limit"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[fr_site_limit]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[fr_site_limit]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[tiv_2011]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="tiv_2011"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[tiv_2011]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[tiv_2011]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[tiv_2012]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="tiv_2012"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[tiv_2012]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[tiv_2012]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[point_latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="point_latitude"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[point_latitude]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[point_latitude]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[point_longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="point_longitude"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[point_longitude]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[point_longitude]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[line]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="line"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[line]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[line]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[eq_site_deductible]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="eq_site_deductible"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[eq_site_deductable]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[eq_site_deductible]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[hu_site_deductible]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="hu_site_deductible"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[hu_site_deductable]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[hu_site_deductible]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[fl_site_deductible]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fl_site_deductible"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[fl_site_deductable]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[fl_site_deductible]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[point_granularity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="point_granularity"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Pointgranularity]"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[point_granularity]" />
+                    <inputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[UpperConstruction]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="UpperConstruction"
+                      externalMetadataColumnId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[construction_point]"
+                      lineageId="Package\Load CSV File\Derived Column.Outputs[Derived Column Output].Columns[UpperConstruction]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[PolicyID]"
+                      dataType="i4"
+                      name="PolicyID" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[statecode]"
+                      dataType="wstr"
+                      length="50"
+                      name="statecode" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[county]"
+                      dataType="wstr"
+                      length="50"
+                      name="county" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Eq_Site_Limit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Eq_Site_Limit" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[hu_site_limit]"
+                      dataType="wstr"
+                      length="50"
+                      name="hu_site_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[fl_site_limit]"
+                      dataType="wstr"
+                      length="50"
+                      name="fl_site_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[fr_site_limit]"
+                      dataType="wstr"
+                      length="50"
+                      name="fr_site_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[tiv_2011]"
+                      dataType="wstr"
+                      length="50"
+                      name="tiv_2011" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[tiv_2012]"
+                      dataType="wstr"
+                      length="50"
+                      name="tiv_2012" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[eq_site_deductable]"
+                      dataType="wstr"
+                      length="50"
+                      name="eq_site_deductable" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[hu_site_deductable]"
+                      dataType="wstr"
+                      length="50"
+                      name="hu_site_deductable" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[fl_site_deductable]"
+                      dataType="wstr"
+                      length="50"
+                      name="fl_site_deductable" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[point_latitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="point_latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[point_longitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="point_longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[line]"
+                      dataType="wstr"
+                      length="50"
+                      name="line" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[construction_point]"
+                      dataType="wstr"
+                      length="50"
+                      name="construction_point" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Pointgranularity]"
+                      dataType="wstr"
+                      length="50"
+                      name="Pointgranularity" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load CSV File\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load CSV File\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load CSV File\Derived Column"
+              componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load CSV File\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV File\Derived Column.Inputs[Derived Column Input].Columns[construction]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="construction"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[construction]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load CSV File\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load CSV File\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\Derived Column.Outputs[Derived Column Output].Columns[UpperConstruction]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Load CSV File\Derived Column.Outputs[Derived Column Output].Columns[UpperConstruction]"
+                      name="UpperConstruction"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[UPPER](#{Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[construction]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">UPPER(construction)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load CSV File\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load CSV File\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load CSV File\Flat File Source"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load CSV File\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SSIS Flat File Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[SSIS Flat File Connection]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[policyID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[policyID]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[policyID]"
+                      name="policyID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[statecode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[statecode]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[statecode]"
+                      name="statecode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[county]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[county]"
+                      name="county"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[eq_site_limit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eq_site_limit]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[eq_site_limit]"
+                      name="eq_site_limit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[hu_site_limit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[hu_site_limit]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[hu_site_limit]"
+                      name="hu_site_limit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[fl_site_limit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_site_limit]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[fl_site_limit]"
+                      name="fl_site_limit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[fr_site_limit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fr_site_limit]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[fr_site_limit]"
+                      name="fr_site_limit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[tiv_2011]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tiv_2011]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[tiv_2011]"
+                      name="tiv_2011"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[tiv_2012]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tiv_2012]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[tiv_2012]"
+                      name="tiv_2012"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[eq_site_deductible]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eq_site_deductible]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[eq_site_deductible]"
+                      name="eq_site_deductible"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[hu_site_deductible]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[hu_site_deductible]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[hu_site_deductible]"
+                      name="hu_site_deductible"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[fl_site_deductible]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_site_deductible]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[fl_site_deductible]"
+                      name="fl_site_deductible"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[fr_site_deductible]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fr_site_deductible]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[fr_site_deductible]"
+                      name="fr_site_deductible"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[point_latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[point_latitude]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[point_latitude]"
+                      name="point_latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[point_longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[point_longitude]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[point_longitude]"
+                      name="point_longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[line]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[line]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[line]"
+                      name="line"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[construction]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[construction]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[construction]"
+                      name="construction"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[point_granularity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[point_granularity]"
+                      length="50"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].Columns[point_granularity]"
+                      name="point_granularity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[policyID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="policyID" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[statecode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="statecode" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="county" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eq_site_limit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="eq_site_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[hu_site_limit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="hu_site_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_site_limit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fl_site_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fr_site_limit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fr_site_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tiv_2011]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tiv_2011" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tiv_2012]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tiv_2012" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eq_site_deductible]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="eq_site_deductible" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[hu_site_deductible]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="hu_site_deductible" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_site_deductible]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fl_site_deductible" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fr_site_deductible]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fr_site_deductible" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[point_latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="point_latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[point_longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="point_longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[line]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="line" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[construction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="construction" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[point_granularity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="point_granularity" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load CSV File.Paths[Derived Column Output]"
+              endId="Package\Load CSV File\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Load CSV File\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load CSV File.Paths[Flat File Source Output]"
+              endId="Package\Load CSV File\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Load CSV File\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Load CSV File"
+          TopLeft="272,72" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load CSV File">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Load CSV File\Derived Column"
+          TopLeft="653,128" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Load CSV File\ADO NET Destination"
+          TopLeft="285,179" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Load CSV File\Flat File Source"
+          TopLeft="342,22" />
+        <EdgeLayout
+          Id="Package\Load CSV File.Paths[Flat File Source Output]"
+          TopLeft="417.5,64">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="312.5,64"
+              Start="0,0"
+              End="312.5,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28"
+                    Point2="0,32"
+                    Point3="4,32" />
+                  <mssgle:LineSegment
+                    End="308.5,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="308.5,32"
+                    Point2="312.5,32"
+                    Point3="312.5,36" />
+                  <mssgle:LineSegment
+                    End="312.5,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load CSV File.Paths[Derived Column Output]"
+          TopLeft="653,149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-189,51"
+              Start="0,0"
+              End="-181.5,51">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-90.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-90.5,0"
+                    Point2="-94.5,0"
+                    Point3="-94.5,4" />
+                  <mssgle:LineSegment
+                    End="-94.5,47" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-94.5,47"
+                    Point2="-94.5,51"
+                    Point3="-98.5,51" />
+                  <mssgle:LineSegment
+                    End="-181.5,51" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load CSV File\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
